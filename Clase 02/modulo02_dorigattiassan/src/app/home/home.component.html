@@ -1,0 +1,22 @@
+<input type="number" [(ngModel)]="valueOne">
+<p>+</p>
+<input type="number" [(ngModel)]="valueTwo">
+<button (click)="Calculator()">Resultado</button>
+<div [ngClass]="{validate:result>0,error:result<0}">Resultado: {{ result }}</div>
+
+<div *ngIf="result>0; else elseBlock">El resultado es positivo!!</div>
+<ng-template #elseBlock>
+    El resultado es negativo!!
+</ng-template>
+<div [hidden]="result<0">El resultado es positivo!!</div>
+
+<h1>ngFor</h1>
+<div *ngFor="let country of countrys">
+    <h2>{{ country }}</h2>
+</div>
+
+<div *ngFor="let product of products">
+    <h2>{{ product.title }}</h2>
+</div>
+
+<button (click)="nextProducts()">Cambiar Productos</button>

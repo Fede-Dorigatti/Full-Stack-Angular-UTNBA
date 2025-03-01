@@ -1,0 +1,22 @@
+.navbar div div ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar div div li {
+    margin-left: 2.5rem;
+}
+
+.navbar div div ul li a {
+    font-size: 1.0rem;
+    color: #0e2431;
+    font-weight: 600;
+    letter-spacing: 0.02rem;
+    transition: 0.1s;
+}
+
+.navbar div div ul li a.active,
+.navbar div div ul li a:hover {
+  color: #230b92;
+}
